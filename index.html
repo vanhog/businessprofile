@@ -17,7 +17,7 @@
   <body>
     <header class="topbar">
       <div class="wrap nav">
-        <a class="brand" href="#top">Dieter H. Hoogestraat</a>
+        <a class="brand" href="#top">Dieter Hoogestraat</a>
         <nav class="navlinks" aria-label="Seitennavigation">
           <a href="#profil">Profil</a>
           <a href="#beispiel">Ein Beispiel</a>
@@ -57,18 +57,12 @@
           </p>
 
           <div class="hero-actions">
-            <a class="button primary" href="mailto:post@hoogestraat.com"
+            <!-- TODO: E-Mail-Adresse ersetzen -->
+            <a class="button primary" href="mailto:DEINE-EMAIL@BEISPIEL.DE"
               >Kontakt aufnehmen</a
             >
-            <a
-              class="button linkedin"
-              href="https://www.linkedin.com/in/dieter-hoogestraat-08497648/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn-Profil von Dieter Hoogestraat"
-              title="LinkedIn-Profil"
-              >in</a
-            >
+            <!-- TODO: Dateinamen / URL zum Lebenslauf ersetzen -->
+            <a class="button" href="cv.pdf">Lebenslauf ansehen</a>
           </div>
 
           <div class="facts" aria-label="Rahmendaten">
@@ -134,22 +128,60 @@
 
           <div class="bridge" id="beispiel">
             <p class="section-kicker">Ein Beispiel</p>
-            <h2>Warum Projektassistenz besonders gut passt</h2>
-            <p>
-              In der Projektassistenz treffen meine bisherigen Stationen
-              besonders deutlich aufeinander: Acht Jahre habe ich als
-              Geschäftsführer einer Ratsfraktion Sitzungen vorbereitet, Termine
-              koordiniert und zwischen Politik, Verwaltung und Öffentlichkeit
-              vermittelt. Als Journalist habe ich gelernt, mich schnell in neue
-              Themen einzuarbeiten und komplexe Sachverhalte verständlich
-              aufzubereiten. Mit dem Geophysik-Studium verstehe ich fachliche
-              Zusammenhänge auch in technischen und wissenschaftlichen Projekten
-              selbst und kann mit Spezialistinnen und Spezialisten auf Augenhöhe
-              sprechen. Genauso gut passen Aufgaben in Verwaltung oder an der
-              Schnittstelle zwischen Fachlichkeit und Organisation zu mir.
-              Besonders reizen mich dabei Aufgaben, bei denen es nicht nur um
-              das Wie der Organisation geht, sondern auch um das Was.
-            </p>
+
+            <noscript>
+              <style>
+                #beispiel .slider {
+                  display: none;
+                }
+              </style>
+              <h2>Warum Projektassistenz besonders gut passt</h2>
+              <p>
+                In der Projektassistenz treffen meine bisherigen Stationen
+                besonders deutlich aufeinander: Acht Jahre habe ich als
+                Geschäftsführer einer Ratsfraktion Sitzungen vorbereitet,
+                Termine koordiniert und zwischen Politik, Verwaltung und
+                Öffentlichkeit vermittelt. Als Journalist habe ich gelernt, mich
+                schnell in neue Themen einzuarbeiten und komplexe Sachverhalte
+                verständlich aufzubereiten. Mit dem Geophysik-Studium verstehe
+                ich fachliche Zusammenhänge auch in technischen und
+                wissenschaftlichen Projekten selbst und kann mit Spezialistinnen
+                und Spezialisten auf Augenhöhe sprechen. Genauso gut passen
+                Aufgaben in Verwaltung oder an der Schnittstelle zwischen
+                Fachlichkeit und Organisation zu mir. Besonders reizen mich
+                dabei Aufgaben, bei denen es nicht nur um das Wie der
+                Organisation geht, sondern auch um das Was.
+              </p>
+            </noscript>
+
+            <div
+              class="slider"
+              data-slider
+              role="region"
+              aria-roledescription="Karussell"
+              aria-label="Beispiele meiner Erfahrung"
+            >
+              <div class="slider-track" data-slider-track></div>
+              <div class="slider-controls">
+                <button
+                  type="button"
+                  class="slider-btn"
+                  data-slider-prev
+                  aria-label="Vorheriges Beispiel"
+                >
+                  ‹
+                </button>
+                <div class="slider-dots" data-slider-dots></div>
+                <button
+                  type="button"
+                  class="slider-btn"
+                  data-slider-next
+                  aria-label="Nächstes Beispiel"
+                >
+                  ›
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -237,7 +269,6 @@
                 Informationen und um Texte schneller in eine gute Form zu
                 bringen. Python- und Web-Kenntnisse nutze ich, um digitale
                 Abläufe direkt selbst umzusetzen, statt sie nur zu beschreiben.
-                Und natürlich nutze ich KI als Coding-Assistenten.
               </p>
             </article>
 
@@ -274,16 +305,16 @@
               <p class="section-kicker">Was ich suche</p>
               <h2>Eine passende Teilzeitstelle in Kiel.</h2>
               <p>
-                Vorzeugsweise im Umfang von 20 Wochenstunden. So kann ich
-                Betreuungsverantwortung und Erwerbsarbeit verlässlich
-                miteinander verbinden. Zum Beispiel in Sachbearbeitung,
-                Verwaltung, Projektunterstützung, Geschäftsstellenarbeit - im
-                kaufmännischen Bereich oder im wissenschaftsnahen Umfeld.
+                Vorzugsweise etwa 20 Wochenstunden – zum Beispiel in
+                Sachbearbeitung, Verwaltung, Projektunterstützung,
+                Geschäftsstellenarbeit, einem kaufmännischen Bereich oder einem
+                wissenschaftsnahen Umfeld.
               </p>
             </div>
 
             <div>
-              <a class="button primary" href="mailto:post@hoogestraat.com">
+              <!-- TODO: E-Mail-Adresse ersetzen -->
+              <a class="button primary" href="mailto:DEINE-EMAIL@BEISPIEL.DE">
                 Unverbindlich Kontakt aufnehmen
               </a>
             </div>
@@ -295,10 +326,11 @@
     <footer>
       <div class="wrap footer-line">
         <span>© Dieter Hoogestraat</span>
-        <span>
-          <a href="legalnotice.html">Impressum</a>
-        </span>
+        <span>Kiel</span>
       </div>
     </footer>
+
+    <script src="content.js"></script>
+    <script src="slider.js"></script>
   </body>
 </html>
