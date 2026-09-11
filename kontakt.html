@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Kontakt zu Dieter H. Hoogestraat"
+    />
+    <title>Kontakt – Dieter H. Hoogestraat</title>
+
+    <style>
+      :root {
+        --bg: #f5f0ea;
+        --surface: #fffdfa;
+        --text: #1d2730;
+        --muted: #66727f;
+        --line: #ddd4ca;
+        --accent: #4f678f;
+        --accent-soft: #e7edf1;
+        --accent-hover: #4e6698;
+        --max: 1120px;
+        --radius: 18px;
+        --shadow: 0 14px 40px rgba(20, 35, 50, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .wrap {
+        width: min(calc(100% - 2rem), var(--max));
+        margin-inline: auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        background: rgba(245, 240, 234, 0.92);
+        border-bottom: 1px solid rgba(223, 228, 232, 0.85);
+      }
+
+      .nav {
+        min-height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .brand {
+        font-weight: 760;
+        letter-spacing: -0.02em;
+        text-decoration: none;
+      }
+
+      .navlinks {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      .navlinks a {
+        text-decoration: none;
+      }
+
+      .navlinks a:hover {
+        color: var(--text);
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 46px;
+        padding: 0 1rem;
+        border: none;
+        border-radius: 10px;
+        font: inherit;
+        font-weight: 700;
+        text-decoration: none;
+        background: var(--surface);
+        color: var(--text);
+        cursor: pointer;
+        transition: 160ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 22px rgba(20, 35, 50, 0.09);
+      }
+
+      .button.primary {
+        color: #fff;
+        background: var(--accent);
+      }
+
+      .button.primary:hover {
+        background: var(--accent-hover);
+      }
+
+      main {
+        padding: 6.4rem 0 4.6rem;
+      }
+
+      .contact-shell {
+        max-width: 820px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        padding: 0.38rem 0.7rem;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 0.9rem;
+        font-weight: 750;
+        margin-bottom: 1.25rem;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 0;
+        font-size: clamp(2.8rem, 7vw, 5.2rem);
+        line-height: 0.98;
+        letter-spacing: -0.055em;
+      }
+
+      .lead {
+        max-width: 690px;
+        margin: 1.55rem 0 2rem;
+        font-size: clamp(1.05rem, 2vw, 1.25rem);
+        color: var(--muted);
+      }
+
+      .form-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: clamp(1.25rem, 4vw, 2rem);
+        box-shadow: var(--shadow);
+      }
+
+      .field + .field {
+        margin-top: 1.2rem;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.45rem;
+        font-size: 0.95rem;
+        font-weight: 700;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.85rem 0.95rem;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--text);
+        font: inherit;
+        outline: none;
+        transition:
+          border-color 150ms ease,
+          box-shadow 150ms ease;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(79, 103, 143, 0.14);
+      }
+
+      textarea {
+        min-height: 220px;
+        resize: vertical;
+      }
+
+      .form-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 1.4rem;
+      }
+
+      .direct-contact {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .direct-contact a {
+        color: var(--accent);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .form-note {
+        margin: 1rem 0 0;
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      footer {
+        padding: 3rem 0 4rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .footer-line {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+        border-top: 1px solid var(--line);
+        padding-top: 1.3rem;
+      }
+
+      @media (max-width: 680px) {
+        main {
+          padding-top: 4.5rem;
+        }
+
+        .navlinks a:not(.button) {
+          display: none;
+        }
+
+        h1 {
+          font-size: clamp(2.45rem, 14vw, 4.2rem);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="wrap nav">
+        <a class="brand" href="index.html#top">Dieter H. Hoogestraat</a>
+        <nav class="navlinks" aria-label="Seitennavigation">
+          <a href="index.html#profil">Profil</a>
+          <a href="index.html#beispiel">Ein Beispiel</a>
+          <a href="index.html#einsatz">Einsatzbereiche</a>
+          <a href="kontakt.html" class="button">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap">
+        <div class="contact-shell">
+          <span class="eyebrow">Kontakt</span>
+          <h1>Schreiben Sie mir.</h1>
+
+          <p class="lead">
+            Für Fragen, Hinweise oder ein unverbindliches Gespräch können Sie mir
+            hier direkt eine Nachricht vorbereiten.
+          </p>
+
+          <form class="form-card" id="contact-form">
+            <div class="field">
+              <label for="sender">Absenderadresse</label>
+              <input
+                type="email"
+                id="sender"
+                name="sender"
+                autocomplete="email"
+                placeholder="name@beispiel.de"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="subject">Betreff</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Betreff Ihrer Nachricht"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="message">Text</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Ihre Nachricht"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="button primary" type="submit">Senden</button>
+              <span class="direct-contact">
+                Direkt per E-Mail:
+                <a href="mailto:post@hoogestraat.com">post@hoogestraat.com</a>
+              </span>
+            </div>
+
+            <p class="form-note">
+              Beim Absenden öffnet sich Ihr E-Mail-Programm mit einer
+              vorausgefüllten Nachricht an post@hoogestraat.com.
+            </p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap footer-line">
+        <span>© Dieter Hoogestraat</span>
+        <span>Kiel</span>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const sender = document.getElementById("sender").value.trim();
+          const subject = document.getElementById("subject").value.trim();
+          const message = document.getElementById("message").value.trim();
+
+          const body =
+            "Absenderadresse: " +
+            sender +
+            "\\n\\n" +
+            message;
+
+          const mailto =
+            "mailto:post@hoogestraat.com" +
+            "?subject=" +
+            encodeURIComponent(subject) +
+            "&body=" +
+            encodeURIComponent(body);
+
+          window.location.href = mailto;
+        });
+    </script>
+  </body>
+</html>
