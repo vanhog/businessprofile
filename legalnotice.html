@@ -16,12 +16,24 @@
       </div>
     </header>
     <section class="wrap hero">
+      <a
+        class="button back-button"
+        href="index.html"
+        onclick="
+          if (document.referrer) {
+            event.preventDefault();
+            history.back();
+          }
+        "
+      >
+        ← Zurück
+      </a>
       <h1>Impressum</h1>
 
       <p>
         Dieter H. Hoogestraat<br />
-        [Straße und Hausnummer]<br />
-        [PLZ Ort]
+        Pamirstr. 30<br />
+        24159 Kiel
       </p>
 
       <p>
