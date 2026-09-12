@@ -16,6 +16,18 @@
       </div>
     </header>
     <section class="wrap hero">
+      <a
+        class="button back-button"
+        href="index.html"
+        onclick="
+          if (document.referrer) {
+            event.preventDefault();
+            history.back();
+          }
+        "
+      >
+        ← Zurück
+      </a>
       <h1>Impressum</h1>
 
       <p>
